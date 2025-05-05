@@ -26,14 +26,17 @@ def compute_median():
     contents = path.read_text()
     lines = contents.splitlines()
     num_list = []
+    out = Path('median_out.txt')
     for line in lines:
         num_list.append(float(line))
         mid = len(num_list)/2
     if mid % 2 != 0:
-        print(num_list[round(mid)])
+        msg = "The median of the given list of numbers is: " + str(num_list[round(mid)])
+        out.write_text(msg)
     else:
         med = num_list[int(mid)] + num_list[int(mid-1)]
-        print(med/2)
+        msg = "The median of the given list of numbers is: " + str(med/2)
+        out.write_text(msg)
     print(num_list)
 
 

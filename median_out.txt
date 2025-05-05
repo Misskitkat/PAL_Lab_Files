@@ -1,0 +1,1 @@
+The median of the given list of numbers is: 7.0
